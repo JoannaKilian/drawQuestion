@@ -1,9 +1,8 @@
 const buttonNext = document.querySelector(".buttonNext");
 const questionParagraph = document.querySelector(".question h1");
-const pseuroElementBtn = document.querySelector("button::before");
 
 let arrow = true;
-let showAnswer = false;
+// let showAnswer = false;
 
 data = {
   questions: [
@@ -97,7 +96,7 @@ function onSelectQuestion() {
     answer.innerHTML = `<h3>${data.questions[i].answer}<h3>`;
     showAnswerButton.innerHTML = "Show me the answer";
     showAnswerButton.addEventListener("click", function () {
-      showAnswer = !showAnswer;
+      // showAnswer = !showAnswer;
       questionParagraph.appendChild(answer);
       showAnswerButton.innerHTML = "The answer is as follows:";
       showAnswerButton.classList.add("showanswer");
