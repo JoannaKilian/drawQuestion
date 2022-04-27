@@ -2,7 +2,6 @@ const buttonNext = document.querySelector(".buttonNext");
 const questionParagraph = document.querySelector(".question h1");
 
 let arrow = true;
-// let showAnswer = false;
 
 data = {
   questions: [
@@ -89,14 +88,11 @@ function onSelectQuestion() {
 
   if (arrow) {
     let i = Math.floor(Math.random() * data.questions.length);
-    console.log(i);
-
     quest.innerHTML = `Question number ${i + 1}: <h3>
     ${data.questions[i].question}</h3>`;
     answer.innerHTML = `<h3>${data.questions[i].answer}<h3>`;
     showAnswerButton.innerHTML = "Show me the answer";
     showAnswerButton.addEventListener("click", function () {
-      // showAnswer = !showAnswer;
       questionParagraph.appendChild(answer);
       showAnswerButton.innerHTML = "The answer is as follows:";
       showAnswerButton.classList.add("showanswer");
